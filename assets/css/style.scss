@@ -1,0 +1,453 @@
+@import 'reset';
+@import 'variable';
+
+@mixin flex ($display,$justify,$align) {
+    display:$display;
+    justify-content:$justify;
+		align-items: $align;
+		@content;
+}
+
+@mixin position ($position,$top,$left){
+	position: $position;
+	top: $top;
+	left: $left;
+	@content;
+}
+
+%text-indent {
+	text-indent: -99999px;
+	float: left;
+}
+
+%relative {
+	width: 100%;
+	position: relative;
+}
+%inputcontrol {
+	padding: 6px 10px;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid $primary-color;
+	background-color: transparent;
+	box-sizing: border-box;
+}
+/*=================================
+  Header styling starts here
+=================================*/
+/* humburder icon start */
+
+.nav__hamburger { 
+  width: 40px;
+  height: 40px;
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 5%;
+  right: 5%;
+}
+  
+.bar1,
+.bar2,
+.bar3 {
+  width: 100%;
+  height: 0;
+  border-top: 2px solid #000;
+  margin-bottom: 6px;
+  float: left;
+  text-indent: -99999px;
+}
+  
+.nav__hamburger.active .bar1 { 
+  -webkit-transform: rotate(45deg) translateX(7px); 
+  -ms-transform: rotate(45deg) translateX(7px); 
+  transform: rotate(45deg) translateX(7px); 
+}
+  
+.nav__hamburger.active .bar2 { display: none; }
+  
+.nav__hamburger.active .bar3 { 
+  -webkit-transform: rotate(-45deg) translateX(5px); 
+  -ms-transform: rotate(-45deg) translateX(5px); 
+  transform: rotate(-45deg) translateX(5px); 
+}
+  /* humburder icon end */
+.header {
+	width: 100%;
+	@include position(absolute,0,0);
+	z-index: 5;
+}
+
+.header .wrapper {
+  text-align: right;
+}
+
+.header__menu {
+	@include flex(flex,flex-end,right);
+	.header__menuitem a {
+		padding: 10px 15px;
+		margin: 20px 0;
+		border: 1px solid transparent;
+		color: $primary-color;
+		font-weight: bold;
+		font-size: 18px;
+		letter-spacing: 1px;
+		transition: ease .3s;
+		&.active,&:hover {
+			border: 1px solid $secondary-color;
+		}
+	}
+}
+/*=================================
+  Header styling ends here
+=================================*/  
+
+/*=================================
+  main styling starts here
+=================================*/
+/* Banner start here*/
+.banner { @extend %relative; }
+
+.banner .wrapper {
+	@include position(absolute,50%,50%);
+	transform: translate(-50%,-50%);
+	.banner__content {
+		width: 36%;
+		float: right;
+		p {
+			color: $secondary-color;
+			font-size: 52px;
+			letter-spacing: 2px;
+			text-align: center;
+		}
+	}
+}
+/* Banner ends here*/
+
+/* Turnip section start here */
+.turnip {
+	background-color: $bg-primary;
+	.turnip__group {
+		padding: 7.8% 0 7.6%;
+		@include flex(flex, space-between ,center );
+		text-align: center;
+		.turnip__content {
+			width: 33.1%;
+			.turnip__icon {
+				&::after {
+					content: '\f1fd';
+					color: $secondary-color;
+					font-family: fontAwesome;
+					font-size: 75px;
+				}
+				span {
+					@extend %text-indent;
+				}
+			}
+			h1 {
+				margin: 15px 0;
+				color: $secondary-color;
+				font-size: 22px;
+				font-weight: bold;
+				letter-spacing: 1px;
+			}
+			p {
+				padding: 0 5px;
+				color: $secondary-color;
+				font-size: 18px;
+				line-height: 23px;
+			}
+		}
+	}
+}
+/* Turnip section ends here */
+
+/* Month special section start here */
+.section__heading {
+	padding: 25px 0;
+	position: relative;
+	color: $primary-color;
+	font-size: 50px;
+	font-family: serif;
+	font-weight: bold;
+	&::after {
+		content: '';
+		width: 15%;
+		height: 3px;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: $dark;
+	}
+}
+.monthspecial .wrapper {
+	padding: 50px 0;
+	text-align: center;
+	.monthspacial__menus {
+		padding: 35px 0;
+		margin: 35px 0;
+		@include flex(flex,center,center){
+			flex-wrap: wrap;
+		};
+		.menu__dish {
+			width: 16.6%;
+			position: relative;
+			&:hover .menudish__content {
+				transform: scaleY(1);
+			}
+			.menudish__content {
+				width: 100%;
+				height: 100%;
+				padding-top: 15px;
+				@include position(absolute,0,0);
+				transform: scaleY(0);
+				transform-origin: bottom;
+				transition: .4s;
+				box-sizing: border-box;
+				background-color: rgba(255, 255, 255, .5);
+				h3 {
+					padding: 10px 0;
+					position: relative;
+					color: $secondary-color;
+					font-size: 20px;
+					font-weight: bold;
+					&::after {
+						content: '';
+						width: 35%;
+						height: 2px;
+						@include position(absolute,100%,50%) {
+							transform: translateX(-50%);
+						}
+						background-color: $secondary-color;
+					}
+				}
+				p {
+					padding: 20px 0;
+					color: $primary-color;
+					font-size: 20px;
+					line-height: 22px;
+				}
+				.dish__price { 
+					color: $primary-color;
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+/* Month special section ends here */
+
+/* About section starts here */
+.about {
+	@extend %relative;
+	text-align: center;
+	.wrapper {
+		padding: 3.3% 0;
+		@include position(absolute,0 ,50%){
+			transform: translateX(-50%);
+		}	
+	.section__heading { width: 50%; }
+	.about__content { width: 50%;
+		p {
+			padding: 8% 20px;
+			color: $primary-color;
+			font-size: 42px;
+			font-weight: bold;
+			letter-spacing: 2
+		}
+	}
+	}
+}
+/* About section ends here */
+
+/* Menu section starts here */
+.menu__section {
+	text-align: center;
+	.wrapper {
+		padding: 2.9% 0;
+		.menu__tabs {
+			margin: 40px 0 15px;
+			@include flex(flex,center ,center );
+			.tabs__item a {
+				padding: 10px 20px;
+				color: $secondary-color;
+				font-size: 23px;
+				font-family: serif;
+				transition: ease .4s;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		.menu__itemlist {
+			width: 100%;
+			@include flex(flex,center,center){
+				flex-wrap: wrap;
+			};
+			.itemlist__item {
+				margin: 23px 0;
+				width: 50%;
+				text-align: left;
+				p {
+					text-transform: uppercase;
+					font-size: 22px;
+					letter-spacing: 2px;
+					font-family: serif;
+				}
+				span {
+					font-size: 18px;
+					font-style: italic;
+				}
+			}
+		}
+	}
+}
+/* Menu section ends here */
+
+/* contact section start here */
+h4 {
+	margin: 15px 0;
+	color: $primary-color;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.contact {
+	@extend %relative;
+	.wrapper {
+		padding: 35px 0;
+		@include position(absolute,0,50%) {
+			transform: translateX(-50%);
+			.contact__content {
+				width:40%;
+				float: right;
+				text-align: center;
+			}
+		}
+	}
+	.contact__addnum {
+		margin-top: 48px;
+		@include flex( flex,space-between,center){
+			text-align: left;
+		};
+		.contact__veggie, .contact__reservation { width: 50%; }
+		.mail__phone a, .contact__veggie address { 
+			display: block;
+			color: $primary-color;
+			font-size: 19px;
+			letter-spacing: 1px;
+		}
+	}
+	.contact_form {
+		width: 100%;
+		margin: 30px 0;
+		@include flex(flex,space-between,center) {
+			flex-wrap: wrap;
+		}
+		h4 {
+			width: 100%;
+			text-align: left;
+		}
+
+		.form__control {
+			width: 48%;
+			margin: 5px 0;
+			input {
+				width: 100%;
+				@extend %inputcontrol;
+				font-size: 18px;
+			}
+		}
+		.textarea__control { 
+			width: 100%;
+			textarea {
+				width: 100%;
+				height: 207px;
+				@extend %inputcontrol;
+				font-size: 16px;
+			}
+		}
+		.form_btn {
+			padding: 10px 20px;
+			@extend %inputcontrol;
+			border: 1px solid $primary-color;
+			margin: 35px auto;
+			transition: ease .4s;
+			color: $primary-color;
+			font-size: 22px;
+			&:hover {
+				background-color: $primary-color;
+				color: #fff;
+			}
+		}
+		
+	}
+}
+/* contact section ends here */
+/*=================================
+  main styling ends here
+=================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/ 
+
+.footer {
+	padding: 40px 0;
+	background-color: transparent;
+	.wrapper {
+		@include flex(flex,space-between,center);
+		p {
+			margin-right: 5%;
+			color: $primary-color;
+			font-size: 19px;
+			letter-spacing: 1px;
+			.bold {
+				color: $bold-color;
+				&::before {
+					content: '\f004';
+					margin: 0 5px;
+					color: red;
+					font-family: fontAwesome;
+				}
+			}
+		}
+		.footer__social {
+			@include flex(flex,center,center);
+			a {
+				&::after {
+					padding: 5px 17px;
+					border: 1px solid #767676;
+					margin: 0 3px;
+					transition: ease .4s;
+					color: #767676;
+					font-size: 20px;
+					font-weight: bold;
+					font-family: fontAwesome;
+				}
+				&:hover::after {
+					background-color: #767676;
+					color: #fff;
+				}
+				&.facebook::after { content: '\f09a';}
+				&.linkdin::after { content: '\f0e1';}
+				span {
+					@extend %text-indent;
+				}
+			}
+		}
+	}
+}
+
+ /*=================================
+  footer styling ends here
+=================================*/ 
+
+/*media query starts*/
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px) {
+
+
+
+}  
