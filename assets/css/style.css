@@ -117,7 +117,9 @@ li {
   margin: 0 auto;
 }
 
-.footer .wrapper .footer__social a span, .turnip .turnip__group .turnip__content .turnip__icon span {
+.footer .wrapper .footer__social a span, .turnip .turnip__group .turnip__content .turnip__icon span, .nav__hamburger .bar1,
+.nav__hamburger .bar2,
+.nav__hamburger .bar3 {
   text-indent: -99999px;
   float: left;
 }
@@ -149,29 +151,26 @@ li {
   top: 5%;
   right: 5%;
 }
-
-.bar1,
-.bar2,
-.bar3 {
+.nav__hamburger .bar1,
+.nav__hamburger .bar2,
+.nav__hamburger .bar3 {
   width: 100%;
   height: 0;
-  border-top: 2px solid #000;
+  border-top: 2px solid #767676;
   margin-bottom: 6px;
-  float: left;
-  text-indent: -99999px;
 }
 
-.nav__hamburger.active .bar1 {
+.nav__hamburger:hover .bar1 {
   -webkit-transform: rotate(45deg) translateX(7px);
   -ms-transform: rotate(45deg) translateX(7px);
   transform: rotate(45deg) translateX(7px);
 }
 
-.nav__hamburger.active .bar2 {
+.nav__hamburger:hover .bar2 {
   display: none;
 }
 
-.nav__hamburger.active .bar3 {
+.nav__hamburger:hover .bar3 {
   -webkit-transform: rotate(-45deg) translateX(5px);
   -ms-transform: rotate(-45deg) translateX(5px);
   transform: rotate(-45deg) translateX(5px);
@@ -402,7 +401,7 @@ li {
 .menu__section .wrapper .menu__itemlist {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -447,8 +446,9 @@ h4 {
   margin-top: 48px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   text-align: left;
+  flex-wrap: wrap;
 }
 .contact .contact__addnum .contact__veggie, .contact .contact__addnum .contact__reservation {
   width: 50%;
@@ -560,6 +560,133 @@ h4 {
   footer styling ends here
 =================================*/
 /*media query starts*/
-/*media query for 995px starts here*/
+/*media query for 1765px starts here*/
+@media only screen and (max-width: 1765px) {
+  .section__heading {
+    padding: 12px 0;
+    font-size: 40px;
+  }
+
+  h4 {
+    margin: 5px 0;
+    font-size: 20px;
+  }
+
+  .contact .contact__addnum {
+    margin-top: 15px;
+  }
+
+  .contact .contact_form {
+    margin: 10px 0;
+  }
+
+  .contact .contact_form .textarea__control textarea {
+    height: 70px;
+  }
+
+  .contact .contact_form .form_btn {
+    padding: 4px 12px;
+    margin: 15px auto;
+    font-size: 18px;
+  }
+
+  .monthspecial .wrapper .monthspacial__menus .menu__dish {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .about .wrapper .section__heading {
+    width: 100%;
+  }
+
+  .about .wrapper .about__content {
+    width: 100%;
+  }
+
+  .about .wrapper .about__content p {
+    padding: 5% 20px;
+    font-size: 25px;
+  }
+
+  .menu__section .wrapper .menu__itemlist .itemlist__item {
+    width: 75%;
+    margin: 15px auto;
+  }
+  .menu__section .wrapper .menu__itemlist .itemlist__item p {
+    font-size: 18px;
+  }
+
+  .contact .wrapper .contact__content {
+    width: 80%;
+    float: left;
+    margin: 0 auto;
+  }
+
+  .contact .contact__addnum .contact__veggie {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .contact__bg {
+    display: none;
+  }
+
+  .contact .wrapper {
+    position: relative;
+  }
+
+  .footer .wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer .wrapper .footer__social {
+    margin: 15px 0;
+  }
+}
+@media only screen and (max-width: 995px) {
+  .nav__hamburger {
+    display: block;
+  }
+
+  .header__nav {
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: #000;
+  }
+
+  .nav__hamburger:hover ~ .header__menu {
+    display: flex;
+  }
+
+  .header__menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner .wrapper .banner__content {
+    width: 100%;
+  }
+
+  .banner .wrapper .banner__content p {
+    font-size: 25px;
+  }
+
+  .turnip .turnip__group {
+    flex-direction: column;
+  }
+
+  .turnip .turnip__group .turnip__content {
+    margin: 25px 0;
+  }
+
+  .monthspecial .wrapper .monthspacial__menus .menu__dish {
+    width: 50%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
