@@ -1,30 +1,15 @@
 <!doctype html>
 
 <!-- If multi-language site, reconsider usage of html lang declaration here. -->
-<html lang="en"> 
+<html lang="en">
 
 <head>
- 
+
   <meta charset="utf-8">
 
-  <title>Client</title>
-  
-  <!-- 120 word description for SEO purposes goes here. Note: Usage of lang tag. -->
-  <!-- <meta name="description" lang="en" content=""> -->
-  
-  <!-- Keywords to help with SEO go here. Note: Usage of lang tag.  -->
-  <!-- <meta name="keywords" lang="en" content=""> -->
-  
-  <!-- View-port Basics: http://mzl.la/VYREaP -->
-  <!-- This meta tag is used for mobile device to display the page without any zooming,
-       so how much the device is able to fit on the screen is what's shown initially. 
-       Remove comments from this tag, when you want to apply media queries to the website. -->
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
-  
-  <!-- To adhear no-cache for Chrome -->
-<!--   <meta http-equiv="cache-control" content="no-store, no-cache, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-store, no-cache" />
-  <meta http-equiv="Expires" content="0" /> -->
+  <title>Veggie Scss</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
   <link rel="shortcut icon" href="favicon.ico" />
@@ -33,12 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
-  <link rel="stylesheet" media="screen" href="assets/css/style.css" >
-
-  <!-- html5shiv aka html5 shim. Supporting HTML5 and CSS for IE browsers less than IE9. -->	
-  <!--[if lt IE 9]>  
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>  
-  <![endif]-->
+  <link rel="stylesheet" media="screen" href="assets/css/style.css">
 
 </head>
 
@@ -46,26 +26,340 @@
   <!--container start-->
   <div class="container">
     <!--header section start-->
-    <header>
-      
+    <header class="header">
+      <div class="wrapper">
+        <nav class="header__nav">
+          <div class="nav__hamburger desktop-none">
+            <span class="bar bar1">bar1</span>
+            <span class="bar bar2">bar1</span>
+            <span class="bar bar3">bar1</span>
+          </div>
+          <ul class="header__menu">
+            <li class="header__menuitem"><a href="#fixme" title="Home">HOME</a></li>
+            <li class="header__menuitem"><a href="#fixme" title="Feature">FEATURE</a></li>
+            <li class="header__menuitem"><a href="#fixme" title="Princes">PRINCES</a></li>
+            <li class="header__menuitem"><a href="#fixme" title="Clients">CLIENTS</a></li>
+            <li class="header__menuitem"><a href="#fixme" title="FAQ">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <!--header section start-->
     <!--main section start-->
     <main>
+      <!-- Banner starts here -->
+      <div class="banner">
+        <figure class="banner__bg">
+          <img src="https://picsum.photos/1838/781?random=2" alt="Banner">
+        </figure>
+        <div class="wrapper">
+          <div class="banner__content">
+            <p>Veggies es bonus vobis proinde vos postulo essum.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Banner ends here -->
 
+      <!-- Turnip section start here -->
+      <section class="turnip">
+        <div class="wrapper">
+          <ul class="turnip__group">
+            <li class="turnip__content">
+              <div class="turnip__icon"><span>icon</span></div>
+              <h1>TURNIP GREEN</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam asperiores, incidunt earum id veniam
+                esse non ab animi doloremque culpa!</p>
+            </li>
+            <li class="turnip__content">
+              <div class="turnip__icon"><span>icon</span></div>
+              <h1>TURNIP GREEN</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam asperiores, incidunt earum id veniam
+                esse non ab animi doloremque culpa!</p>
+            </li>
+            <li class="turnip__content">
+              <div class="turnip__icon"><span>icon</span></div>
+              <h1>TURNIP GREEN</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam asperiores, incidunt earum id veniam
+                esse non ab animi doloremque culpa!</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Turnip section ends here -->
+
+      <!-- Month special section start here -->
+      <section class="monthspecial">
+        <div class="wrapper">
+          <h2 class="section__heading">This month special</h2>
+          <ul class="monthspacial__menus">
+            <li class="menu__dish">
+              <figure class="menu__img">
+                <img src="https://picsum.photos/276/191?random=1" alt="menu">
+              </figure>
+              <div class="menudish__content">
+                <h3>GREEN FAVA</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <span class="dish__price">17$</span>
+              </div>
+            </li>
+            <li class="menu__dish">
+              <figure class="menu__img">
+                <img src="https://picsum.photos/276/191?random=2" alt="menu">
+              </figure>
+              <div class="menudish__content">
+                <h3>GREEN PULAV</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <span class="dish__price">18$</span>
+              </div>
+            </li>
+            <li class="menu__dish">
+              <figure class="menu__img">
+                <img src="https://picsum.photos/276/191?random=3" alt="menu">
+              </figure>
+              <div class="menudish__content">
+                <h3>GREEN FAVA</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <span class="dish__price">17$</span>
+              </div>
+            </li>
+            <li class="menu__dish">
+              <figure class="menu__img">
+                <img src="https://picsum.photos/276/191?random=4" alt="menu">
+              </figure>
+              <div class="menudish__content">
+                <h3>GREEN FAVA</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <span class="dish__price">17$</span>
+              </div>
+            </li>
+            <li class="menu__dish">
+              <figure class="menu__img">
+                <img src="https://picsum.photos/276/191?random=5" alt="menu">
+              </figure>
+              <div class="menudish__content">
+                <h3>GREEN FAVA</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <span class="dish__price">17$</span>
+              </div>
+            </li>
+            <li class="menu__dish">
+              <figure class="menu__img">
+                <img src="https://picsum.photos/276/191?random=6" alt="menu">
+              </figure>
+              <div class="menudish__content">
+                <h3>GREEN FAVA</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <span class="dish__price">17$</span>
+              </div>
+            </li>
+            <li class="menu__dish">
+              <figure class="menu__img">
+                <img src="https://picsum.photos/276/191?random=7" alt="menu">
+              </figure>
+              <div class="menudish__content">
+                <h3>GREEN FAVA</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <span class="dish__price">17$</span>
+              </div>
+            </li>
+            <li class="menu__dish">
+              <figure class="menu__img">
+                <img src="https://picsum.photos/276/191?random=8" alt="menu">
+              </figure>
+              <div class="menudish__content">
+                <h3>GREEN FAVA</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <span class="dish__price">17$</span>
+              </div>
+            </li>
+            <li class="menu__dish">
+              <figure class="menu__img">
+                <img src="https://picsum.photos/276/191?random=6" alt="menu">
+              </figure>
+              <div class="menudish__content">
+                <h3>GREEN FAVA</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <span class="dish__price">17$</span>
+              </div>
+            </li>
+            <li class="menu__dish">
+              <figure class="menu__img">
+                <img src="https://picsum.photos/276/191?random=2" alt="menu">
+              </figure>
+              <div class="menudish__content">
+                <h3>GREEN FAVA</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <span class="dish__price">17$</span>
+              </div>
+            </li>
+            <li class="menu__dish">
+              <figure class="menu__img">
+                <img src="https://picsum.photos/276/191?random=1" alt="menu">
+              </figure>
+              <div class="menudish__content">
+                <h3>GREEN FAVA</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <span class="dish__price">17$</span>
+              </div>
+            </li>
+            <li class="menu__dish">
+              <figure class="menu__img">
+                <img src="https://picsum.photos/276/191?random=3" alt="menu">
+              </figure>
+              <div class="menudish__content">
+                <h3>GREEN FAVA</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <span class="dish__price">17$</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Month special section ends here -->
+
+      <!-- About section starts here -->
+      <section class="about">
+        <figure class="about__bg">
+          <img src="https://picsum.photos/1838/781?random=4" alt="about">
+        </figure>
+        <div class="wrapper">
+          <h2 class="section__heading">About Us</h2>
+          <div class="about__content">
+            <p>Nori Grape silver beet broccoli kombu beet green fava been potato quandong celery. Bunya nuts blackeyed
+              pea prairie turnip leek lentil turnip greens parsnip</p>
+          </div>
+        </div>
+      </section>
+      <!-- About section end here -->
+
+      <!-- Menu section starts here -->
+      <section class="menu__section">
+        <div class="wrapper">
+          <h2 class="section__heading">Menu</h2>
+          <ul class="menu__tabs">
+            <li class="tabs__item"><a href="#fixme" title="Staters">Staters</a></li>
+            <li class="tabs__item"><a href="#fixme" title="Main Dishesh">Main Dishesh</a></li>
+            <li class="tabs__item"><a href="#fixme" title="Dessers">Dessers</a></li>
+            <li class="tabs__item"><a href="#fixme" title="Drinks">Drinks</a></li>
+          </ul>
+          <ul class="menu__itemlist">
+            <li class="itemlist__item">
+              <p>Smoked Ricotta Terrine....................................................12$</p>
+              <span>riccota, shallots, cheddar, capers</span>
+            </li>
+            <li class="itemlist__item">
+              <p>Smoked Ricotta Terrine....................................................12$</p>
+              <span>riccota, shallots, cheddar, capers</span>
+            </li>
+            <li class="itemlist__item">
+              <p>Smoked Ricotta Terrine....................................................12$</p>
+              <span>riccota, shallots, cheddar, capers</span>
+            </li>
+            <li class="itemlist__item">
+              <p>Smoked Ricotta Terrine....................................................12$</p>
+              <span>riccota, shallots, cheddar, capers</span>
+            </li>
+            <li class="itemlist__item">
+              <p>Smoked Ricotta Terrine....................................................12$</p>
+              <span>riccota, shallots, cheddar, capers</span>
+            </li>
+            <li class="itemlist__item">
+              <p>Smoked Ricotta Terrine....................................................12$</p>
+              <span>riccota, shallots, cheddar, capers</span>
+            </li>
+            <li class="itemlist__item">
+              <p>Smoked Ricotta Terrine....................................................12$</p>
+              <span>riccota, shallots, cheddar, capers</span>
+            </li>
+            <li class="itemlist__item">
+              <p>Smoked Ricotta Terrine....................................................12$</p>
+              <span>riccota, shallots, cheddar, capers</span>
+            </li>
+            <li class="itemlist__item">
+              <p>Smoked Ricotta Terrine....................................................12$</p>
+              <span>riccota, shallots, cheddar, capers</span>
+            </li>
+            <li class="itemlist__item">
+              <p>Smoked Ricotta Terrine....................................................12$</p>
+              <span>riccota, shallots, cheddar, capers</span>
+            </li>
+            <li class="itemlist__item">
+              <p>Smoked Ricotta Terrine....................................................12$</p>
+              <span>riccota, shallots, cheddar, capers</span>
+            </li>
+            <li class="itemlist__item">
+              <p>Smoked Ricotta Terrine....................................................12$</p>
+              <span>riccota, shallots, cheddar, capers</span>
+            </li>
+            <li class="itemlist__item">
+              <p>Smoked Ricotta Terrine....................................................12$</p>
+              <span>riccota, shallots, cheddar, capers</span>
+            </li>
+            <li class="itemlist__item">
+              <p>Smoked Ricotta Terrine....................................................12$</p>
+              <span>riccota, shallots, cheddar, capers</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Menu section ends here -->
+
+      <!-- contact section start here -->
+      <section class="contact">
+        <figure class="contact__bg">
+          <img src="https://picsum.photos/1838/781?random=8" alt="Contact">
+        </figure>
+        <div class="wrapper">
+          <div class="contact__content">
+            <h2 class="section__heading">Contact</h2>
+            <div class="contact__addnum">
+              <div class="contact__veggie">
+                <h4>VEGGIE</h4>
+                <address>
+                  3428 Mangolia Avenue Hackettstown, NJ 07840
+                </address>
+              </div>
+              <div class="contact__reservation">
+                <h4>RESERVATION</h4>
+                <div class="mail__phone">
+                  <a href="mailto:reservations@veggie.com" title="reservations@veggie.com">reservations@veggie.com</a>
+                  <a href="tel:+48 202 555 0114" title="+48 202-555-0114">+48 202-555-0114</a>
+                </div>
+              </div>
+            </div>
+            <form action="#" class="contact_form">
+              <div class="form__control">
+                <input type="text" placeholder="First Name" class="fname">
+              </div>
+              <div class="form__control">
+                <input type="text" placeholder="Email" class="email">
+              </div>
+              <div class="form__control">
+                <textarea name="message" placeholder="Message" class="msg"></textarea>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- contact section ends here -->
     </main>
     <!--main section end-->
 
     <!--footer section start-->
-    <footer>      
-
+    <footer class="footer">
+      <div class="wrapper">
+        <p>made with <span class="bold">Bootstrap Themes</span> 2021. All Rights Reserved</p>
+        <ul class="footer__social">
+          <li class="social__item"><a href="#fixme" title="facebook" class="facebook"><span>facebook</span></a></li>
+          <li class="social__item"><a href="#fixme" title="Linkdin" class="linkdin"><span>linkdin</span></a></li>
+        </ul>
+      </div>
     </footer>
     <!--footer section end-->
 
   </div>
   <!--container end-->
 
-<!-- <script src="js/vendors/jquery-1.8.3.min.js"></script>
-<script src="js/script.js"></script> -->
 </body>
+
 </html>
