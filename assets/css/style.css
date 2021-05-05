@@ -1,8 +1,7 @@
-@charset "utf-8";
+@charset "UTF-8";
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
-
 /* 1.1. Eric Meyers Reset
    http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -30,16 +29,19 @@ footer, header, hgroup, menu, nav, section {
 }
 
 /* Force scrollbar */
-html { overflow-y: scroll; }
+html {
+  overflow-y: scroll;
+}
 
 /* Align radios and text inputs with their label */
-
-input[type='radio'] { vertical-align: text-bottom; }
+input[type=radio] {
+  vertical-align: text-bottom;
+}
 
 /* Hand cursor on clickable input elements */
 label,
-input[type='button'],
-input[type='submit'],
+input[type=button],
+input[type=submit],
 button {
   cursor: pointer;
 }
@@ -50,7 +52,9 @@ strong {
   font-size: inherit;
 }
 
-em { font-style: italic; }
+em {
+  font-style: italic;
+}
 
 img {
   width: 100%;
@@ -66,20 +70,29 @@ sup {
   line-height: 0;
 }
 
-sup { top: -.7em; }
-sub { bottom: -.25em; }
+sup {
+  top: -0.7em;
+}
+
+sub {
+  bottom: -0.25em;
+}
 
 /* 1.2. Clear Fix
    ========================== */
-
 .cf:before,
 .cf:after {
   display: table;
   content: " ";
 }
 
-.cf:after { clear: both; }
-.cf { *zoom: 1; }
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
 
 /*for all*/
 body {
@@ -87,9 +100,9 @@ body {
   font-family: sans-serif;
 }
 
-a { 
+a {
   display: inline-block;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 li {
@@ -99,56 +112,454 @@ li {
 
 /*for wrapper*/
 .wrapper {
-  max-width: 1360px;
-  width: 86%; 
+  max-width: 1665px;
+  width: 90%;
   margin: 0 auto;
 }
+
+.footer .wrapper .footer__social a span, .turnip .turnip__group .turnip__content .turnip__icon span {
+  text-indent: -99999px;
+  float: left;
+}
+
+.contact, .about, .banner {
+  width: 100%;
+  position: relative;
+}
+
+.contact .contact_form .form_btn, .contact .contact_form .textarea__control textarea, .contact .contact_form .form__control input {
+  padding: 6px 10px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #767676;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
 /*=================================
   Header styling starts here
 =================================*/
+/* humburder icon start */
+.nav__hamburger {
+  width: 40px;
+  height: 40px;
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 5%;
+  right: 5%;
+}
 
+.bar1,
+.bar2,
+.bar3 {
+  width: 100%;
+  height: 0;
+  border-top: 2px solid #000;
+  margin-bottom: 6px;
+  float: left;
+  text-indent: -99999px;
+}
 
+.nav__hamburger.active .bar1 {
+  -webkit-transform: rotate(45deg) translateX(7px);
+  -ms-transform: rotate(45deg) translateX(7px);
+  transform: rotate(45deg) translateX(7px);
+}
 
+.nav__hamburger.active .bar2 {
+  display: none;
+}
 
+.nav__hamburger.active .bar3 {
+  -webkit-transform: rotate(-45deg) translateX(5px);
+  -ms-transform: rotate(-45deg) translateX(5px);
+  transform: rotate(-45deg) translateX(5px);
+}
 
+/* humburder icon end */
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.header .wrapper {
+  text-align: right;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: right;
+}
+.header__menu .header__menuitem a {
+  padding: 10px 15px;
+  margin: 20px 0;
+  border: 1px solid transparent;
+  color: #767676;
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 1px;
+  transition: ease 0.3s;
+}
+.header__menu .header__menuitem a.active, .header__menu .header__menuitem a:hover {
+  border: 1px solid #828486;
+}
 
 /*=================================
   Header styling ends here
-=================================*/  
-
+=================================*/
 /*=================================
   main styling starts here
 =================================*/
+/* Banner start here*/
+.banner .wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.banner .wrapper .banner__content {
+  width: 36%;
+  float: right;
+}
+.banner .wrapper .banner__content p {
+  color: #828486;
+  font-size: 52px;
+  letter-spacing: 2px;
+  text-align: center;
+}
 
+/* Banner ends here*/
+/* Turnip section start here */
+.turnip {
+  background-color: #F3C30F;
+}
+.turnip .turnip__group {
+  padding: 7.8% 0 7.6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.turnip .turnip__group .turnip__content {
+  width: 33.1%;
+}
+.turnip .turnip__group .turnip__content .turnip__icon::after {
+  content: "";
+  color: #828486;
+  font-family: fontAwesome;
+  font-size: 75px;
+}
+.turnip .turnip__group .turnip__content h1 {
+  margin: 15px 0;
+  color: #828486;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.turnip .turnip__group .turnip__content p {
+  padding: 0 5px;
+  color: #828486;
+  font-size: 18px;
+  line-height: 23px;
+}
 
+/* Turnip section ends here */
+/* Month special section start here */
+.section__heading {
+  padding: 25px 0;
+  position: relative;
+  color: #767676;
+  font-size: 50px;
+  font-family: serif;
+  font-weight: bold;
+}
+.section__heading::after {
+  content: "";
+  width: 15%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+}
 
+.monthspecial .wrapper {
+  padding: 50px 0;
+  text-align: center;
+}
+.monthspecial .wrapper .monthspacial__menus {
+  padding: 35px 0;
+  margin: 35px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.monthspecial .wrapper .monthspacial__menus .menu__dish {
+  width: 16.6%;
+  position: relative;
+}
+.monthspecial .wrapper .monthspacial__menus .menu__dish:hover .menudish__content {
+  transform: scaleY(1);
+}
+.monthspecial .wrapper .monthspacial__menus .menu__dish .menudish__content {
+  width: 100%;
+  height: 100%;
+  padding-top: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: 0.4s;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.monthspecial .wrapper .monthspacial__menus .menu__dish .menudish__content h3 {
+  padding: 10px 0;
+  position: relative;
+  color: #828486;
+  font-size: 20px;
+  font-weight: bold;
+}
+.monthspecial .wrapper .monthspacial__menus .menu__dish .menudish__content h3::after {
+  content: "";
+  width: 35%;
+  height: 2px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #828486;
+}
+.monthspecial .wrapper .monthspacial__menus .menu__dish .menudish__content p {
+  padding: 20px 0;
+  color: #767676;
+  font-size: 20px;
+  line-height: 22px;
+}
+.monthspecial .wrapper .monthspacial__menus .menu__dish .menudish__content .dish__price {
+  color: #767676;
+  font-size: 18px;
+}
 
+/* Month special section ends here */
+/* About section starts here */
+.about {
+  text-align: center;
+}
+.about .wrapper {
+  padding: 3.3% 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about .wrapper .section__heading {
+  width: 50%;
+}
+.about .wrapper .about__content {
+  width: 50%;
+}
+.about .wrapper .about__content p {
+  padding: 8% 20px;
+  color: #767676;
+  font-size: 42px;
+  font-weight: bold;
+  letter-spacing: 2;
+}
 
+/* About section ends here */
+/* Menu section starts here */
+.menu__section {
+  text-align: center;
+}
+.menu__section .wrapper {
+  padding: 2.9% 0;
+}
+.menu__section .wrapper .menu__tabs {
+  margin: 40px 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu__section .wrapper .menu__tabs .tabs__item a {
+  padding: 10px 20px;
+  color: #828486;
+  font-size: 23px;
+  font-family: serif;
+  transition: ease 0.4s;
+}
+.menu__section .wrapper .menu__tabs .tabs__item a:hover {
+  text-decoration: underline;
+}
+.menu__section .wrapper .menu__itemlist {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.menu__section .wrapper .menu__itemlist .itemlist__item {
+  margin: 23px 0;
+  width: 50%;
+  text-align: left;
+}
+.menu__section .wrapper .menu__itemlist .itemlist__item p {
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: 2px;
+  font-family: serif;
+}
+.menu__section .wrapper .menu__itemlist .itemlist__item span {
+  font-size: 18px;
+  font-style: italic;
+}
 
+/* Menu section ends here */
+/* contact section start here */
+h4 {
+  margin: 15px 0;
+  color: #767676;
+  font-size: 25px;
+  font-weight: bold;
+}
 
+.contact .wrapper {
+  padding: 35px 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.contact .wrapper .contact__content {
+  width: 40%;
+  float: right;
+  text-align: center;
+}
+.contact .contact__addnum {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+.contact .contact__addnum .contact__veggie, .contact .contact__addnum .contact__reservation {
+  width: 50%;
+}
+.contact .contact__addnum .mail__phone a, .contact .contact__addnum .contact__veggie address {
+  display: block;
+  color: #767676;
+  font-size: 19px;
+  letter-spacing: 1px;
+}
+.contact .contact_form {
+  width: 100%;
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contact .contact_form h4 {
+  width: 100%;
+  text-align: left;
+}
+.contact .contact_form .form__control {
+  width: 48%;
+  margin: 5px 0;
+}
+.contact .contact_form .form__control input {
+  width: 100%;
+  font-size: 18px;
+}
+.contact .contact_form .textarea__control {
+  width: 100%;
+}
+.contact .contact_form .textarea__control textarea {
+  width: 100%;
+  height: 207px;
+  font-size: 16px;
+}
+.contact .contact_form .form_btn {
+  padding: 10px 20px;
+  border: 1px solid #767676;
+  margin: 35px auto;
+  transition: ease 0.4s;
+  color: #767676;
+  font-size: 22px;
+}
+.contact .contact_form .form_btn:hover {
+  background-color: #767676;
+  color: #fff;
+}
 
+/* contact section ends here */
 /*=================================
   main styling ends here
 =================================*/
-
 /*=================================
   footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
+=================================*/
+.footer {
+  padding: 40px 0;
+  background-color: transparent;
+}
+.footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .wrapper p {
+  margin-right: 5%;
+  color: #767676;
+  font-size: 19px;
+  letter-spacing: 1px;
+}
+.footer .wrapper p .bold {
+  color: #198017;
+}
+.footer .wrapper p .bold::before {
+  content: "";
+  margin: 0 5px;
+  color: red;
+  font-family: fontAwesome;
+}
+.footer .wrapper .footer__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .wrapper .footer__social a::after {
+  padding: 5px 17px;
+  border: 1px solid #767676;
+  margin: 0 3px;
+  transition: ease 0.4s;
+  color: #767676;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: fontAwesome;
+}
+.footer .wrapper .footer__social a:hover::after {
+  background-color: #767676;
+  color: #fff;
+}
+.footer .wrapper .footer__social a.facebook::after {
+  content: "";
+}
+.footer .wrapper .footer__social a.linkdin::after {
+  content: "";
+}
+/*=================================
   footer styling ends here
-=================================*/ 
-
+=================================*/
 /*media query starts*/
 /*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
 
-
-
-}  
+/*# sourceMappingURL=style.css.map */
